@@ -1,6 +1,3 @@
-/* ================================
-   RESET
-================================ */
 * {
   margin: 0;
   padding: 0;
@@ -33,9 +30,7 @@ button {
   border: none;
 }
 
-/* ================================
-   NAVBAR
-================================ */
+/*  NAVBAR */
 .navbar {
   background-color: #ffffff;
   height: 64px;
@@ -117,9 +112,7 @@ button {
   background-color: #1a56db;
 }
 
-/* ================================
-   HERO
-================================ */
+/* HERO */
 .hero {
   position: relative;
   min-height: 560px;
@@ -262,11 +255,10 @@ button {
   background-color: #1a56db;
 }
 
-/* ================================
+/* 
    STATS BAR
    Full-width white strip below hero,
-   no rounded card — matches screenshot
-================================ */
+   no rounded card — matches screenshot */
 .stats-bar {
   background-color: #ffffff;
   border-bottom: 1px solid #e2e1ed;
@@ -310,11 +302,7 @@ button {
   flex-shrink: 0;
 }
 
-/* ================================
-   HOW IT WORKS
-   Plain white section — no card
-   shadows on steps (matches design)
-================================ */
+/* HOW IT WORKS */
 .how-section {
   background-color: #ffffff;
   padding: 72px 24px 80px 24px;
@@ -376,9 +364,7 @@ button {
   line-height: 1.65;
 }
 
-/* ================================
-   FEATURED FACILITIES
-================================ */
+/* FEATURED FACILITIES */
 .facilities-section {
   background-color: #f3f3fe;
   padding: 56px 0 64px 0;
@@ -565,9 +551,7 @@ button {
   border-radius: 6px;
 }
 
-/* ================================
-   FOOTER
-================================ */
+/* FOOTER */
 .footer {
   background-color: #0f1c2c;
   color: #ffffff;
@@ -723,9 +707,7 @@ button {
   color: #ffffff;
 }
 
-/* ================================
-   RESPONSIVE — MOBILE
-================================ */
+/* RESPONSIVE — MOBILE */
 @media (max-width: 768px) {
 
   /* Hide nav links on mobile */
