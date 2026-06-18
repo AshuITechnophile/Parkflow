@@ -1,11 +1,111 @@
+/* Remove default browser spacing and sizing */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html,
+/* Basic body style */
 body {
-    width: 100%;
-    height: 100%;
+    font-family: 'Inter', sans-serif;
+    background-color: #faf8ff;
+    color: #191b23;
+}
+
+/* Make images responsive */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Remove underline from all links */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Remove bullet points from lists */
+ul {
+    list-style: none;
+}
+
+/* NAVBAR */
+.navbar {
+    background-color: #faf8ff;
+    padding: 0 24px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    z-index: 100;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: 800;
+    color: #003fb1;
+}
+
+/* Nav links - shown in a row */
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+/* Each link */
+.nav-link {
+    font-size: 14px;
+    color: #434654;
+}
+
+.nav-link:hover {
+    color: #003fb1;
+}
+
+/* Active link - blue + underline */
+.nav-link.active {
+    color: #003fb1;
+    font-weight: 700;
+    border-bottom: 2px solid #003fb1;
+    padding-bottom: 2px;
+}
+
+/* Right side buttons */
+.nav-buttons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Login button - no background */
+.btn-login {
+    background: none;
+    border: none;
+    font-size: 13px;
+    color: #434654;
+    cursor: pointer;
+}
+
+.btn-login:hover {
+    color: #003fb1;
+}
+
+/* Sign Up button - blue pill */
+.btn-signup {
+    background-color: #003fb1;
+    color: white;
+    border: none;
+    padding: 10px 22px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-signup:hover {
+    background-color: #1a56db;
 }
