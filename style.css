@@ -109,3 +109,158 @@ ul {
 .btn-signup:hover {
     background-color: #1a56db;
 }
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 80px 24px;
+    overflow: hidden;
+}
+
+/* Background image - covers full hero */
+.hero-bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Dark blue gradient on top of image */
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #00174d, #003fb1, #1a56db);
+    opacity: 0.92;
+}
+
+/* All text content sits above image and overlay */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    max-width: 860px;
+    width: 100%;
+}
+
+/* Big heading */
+.hero-title {
+    font-size: 48px;
+    font-weight: 700;
+    color: white;
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+/* Subtitle below heading */
+.hero-subtitle {
+    font-size: 16px;
+    color: #d4dcff;
+    max-width: 480px;
+    margin: 0 auto 36px auto;
+    line-height: 1.6;
+}
+
+/* White search card */
+.search-card {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-radius: 20px;
+    padding: 28px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+/* Each field block inside the card */
+.search-field {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    text-align: left;
+    flex: 1;
+    min-width: 160px;
+}
+
+/* Label above input */
+.search-field label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    color: #3a4859;
+}
+
+/* Wrapper for icon + input together */
+.input-wrapper {
+    position: relative;
+}
+
+/* Icon inside input */
+.input-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    color: #737686;
+}
+
+/* Text input styling */
+.search-field input {
+    width: 100%;
+    padding: 12px 12px 12px 38px;
+    font-size: 14px;
+    border: 1px solid #c3c5d7;
+    border-radius: 10px;
+    background-color: #f3f3fe;
+    color: #191b23;
+    outline: none;
+}
+
+.search-field input:focus {
+    border-color: #003fb1;
+    box-shadow: 0 0 0 3px rgba(0, 63, 177, 0.12);
+}
+
+/* Search button */
+.btn-search {
+    background-color: #003fb1;
+    color: white;
+    border: none;
+    padding: 0 32px;
+    height: 52px;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+    box-shadow: 0 4px 16px rgba(0, 63, 177, 0.3);
+}
+
+.btn-search:hover {
+    background-color: #1a56db;
+}
+
+/* MOBILE */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 30px;
+    }
+
+    .search-card {
+        flex-direction: column;
+    }
+
+    .btn-search {
+        width: 100%;
+    }
+}
