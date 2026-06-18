@@ -1,401 +1,319 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Parkflow</title>
-
-    <!-- Google Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet" />
-
-    <!-- Icons -->
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-
-    <!-- Our CSS file -->
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parkflow — Precision Parking Booking India</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-    <!-- NAVIGATION BAR -->
-    <nav class="navbar">
 
-        <!-- Left side - Logo -->
-        <a href="#" class="logo">Parkflow</a>
+  <!-- ================================
+       NAVBAR
+  ================================ -->
+  <nav class="navbar">
+    <a href="#" class="nav-logo">Parkflow</a>
 
-        <!-- Middle - Links -->
-        <ul class="nav-links">
-            <li><a href="#" class="nav-link active">Find Parking</a></li>
-            <li><a href="#" class="nav-link">My Bookings</a></li>
-            <li><a href="#" class="nav-link">Facilities</a></li>
-            <li><a href="#" class="nav-link">Help</a></li>
-        </ul>
+    <ul class="nav-links">
+      <li><a href="#" class="nav-link active">Find Parking</a></li>
+      <li><a href="#" class="nav-link">My Bookings</a></li>
+      <li><a href="#" class="nav-link">Facilities</a></li>
+      <li><a href="#" class="nav-link">Help</a></li>
+    </ul>
 
-        <!-- Right side - Buttons -->
-        <div class="nav-buttons">
-            <button class="btn-login">Login</button>
-            <button class="btn-signup">Sign Up</button>
+    <div class="nav-actions">
+      <button class="btn-login">Login</button>
+      <button class="btn-signup">Sign Up</button>
+    </div>
+  </nav>
+
+  <!-- ================================
+       HERO
+  ================================ -->
+  <section class="hero">
+
+    <!-- city background image -->
+    <img
+      class="hero-bg"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv6hx7f7qilE0vUKFnbYgN60iqTSGk6eik78_JN94UHKGSmIxFTBjC10oje_BKVFl2bReZ8Dc7KBLv6kHV6RlMZ7E7GOpXntVAms7O8s6S0RpyWK6ih6btqDG93NrglJg4sNTfQo6dbnLQ9jOnHgU23j0qupZM4WJXjbm8U2oDYsBaM9q9oiPRoVCCjru3P8-xekfRqcvR4IsZP64hZ97UCxtCVkCPvqz0jkIdwqxfs0GiiBF_1TwCmqz59G1Pg55qnpSEHgbx3cWz"
+      alt="Indian city skyline"
+    />
+
+    <!-- blue gradient overlay on top of image -->
+    <div class="hero-overlay"></div>
+
+    <!-- all text + search box -->
+    <div class="hero-content">
+      <h1 class="hero-title">Find &amp; Book Parking <br/> in Seconds</h1>
+      <p class="hero-subtitle">
+        Secure your spot at over 500 premium facilities across India.<br/>
+        Reliable, touchless, and guaranteed.
+      </p>
+
+      <!-- Search card -->
+      <div class="search-card">
+
+        <div class="search-field">
+          <label class="search-label">LOCATION</label>
+          <div class="input-wrap">
+            <span class="material-symbols-outlined field-icon">location_on</span>
+            <input type="text" placeholder="Where are you going?" />
+          </div>
         </div>
 
-    </nav>
-
-    <!-- HERO SECTION -->
-    <section class="hero">
-
-        <!-- Dark blue background overlay -->
-        <div class="hero-overlay"></div>
-
-        <!-- Background image -->
-        <img class="hero-bg-image"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBv6hx7f7qilE0vUKFnbYgN60iqTSGk6eik78_JN94UHKGSmIxFTBjC10oje_BKVFl2bReZ8Dc7KBLv6kHV6RlMZ7E7GOpXntVAms7O8s6S0RpyWK6ih6btqDG93NrglJg4sNTfQo6dbnLQ9jOnHgU23j0qupZM4WJXjbm8U2oDYsBaM9q9oiPRoVCCjru3P8-xekfRqcvR4IsZP64hZ97UCxtCVkCPvqz0jkIdwqxfs0GiiBF_1TwCmqz59G1Pg55qnpSEHgbx3cWz"
-            alt="Indian city skyline" />
-
-        <!-- Hero text and search box -->
-        <div class="hero-content">
-
-            <!-- Heading -->
-            <h1 class="hero-title">Find & Book Parking <br /> in Seconds</h1>
-
-            <!-- Subtext -->
-            <p class="hero-subtitle">
-                Secure your spot at over 500 premium facilities across India.
-                Reliable, touchless, and guaranteed.
-            </p>
-
-            <!-- Search Box Card -->
-            <div class="search-card">
-
-                <!-- Location input -->
-                <div class="search-field">
-                    <label>LOCATION</label>
-                    <div class="input-wrapper">
-                        <span class="material-symbols-outlined input-icon">location_on</span>
-                        <input type="text" placeholder="Where are you going?" />
-                    </div>
-                </div>
-
-                <!-- Date input -->
-                <div class="search-field">
-                    <label>DATE</label>
-                    <div class="input-wrapper">
-                        <span class="material-symbols-outlined input-icon">calendar_today</span>
-                        <input type="date" />
-                    </div>
-                </div>
-
-                <!-- Time input -->
-                <div class="search-field">
-                    <label>TIME</label>
-                    <div class="input-wrapper">
-                        <span class="material-symbols-outlined input-icon">schedule</span>
-                        <input type="time" />
-                    </div>
-                </div>
-
-                <!-- Search button -->
-                <button class="btn-search">Find Parking</button>
-
-            </div>
+        <div class="search-field search-field--sm">
+          <label class="search-label">DATE</label>
+          <div class="input-wrap">
+            <span class="material-symbols-outlined field-icon">calendar_today</span>
+            <input type="date" />
+          </div>
         </div>
 
-    </section>
-
-    <!-- STATS BAR -->
-    <section class="stats">
-
-        <!-- Stat 1 -->
-        <div class="stat-item">
-            <span class="stat-number">500+</span>
-            <span class="stat-label">Facilities</span>
+        <div class="search-field search-field--sm">
+          <label class="search-label">TIME</label>
+          <div class="input-wrap">
+            <span class="material-symbols-outlined field-icon">schedule</span>
+            <input type="time" />
+          </div>
         </div>
 
-        <!-- Divider -->
-        <div class="stat-divider"></div>
+        <button class="btn-find">Find Parking</button>
 
-        <!-- Stat 2 -->
-        <div class="stat-item">
-            <span class="stat-number">10,000+</span>
-            <span class="stat-label">Slots</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================
+       STATS BAR
+  ================================ -->
+  <section class="stats-bar">
+    <div class="stat">
+      <span class="stat-num">500+</span>
+      <span class="stat-lbl">FACILITIES</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">10,000+</span>
+      <span class="stat-lbl">SLOTS</span>
+    </div>
+    <div class="stat-divider"></div>
+    <div class="stat">
+      <span class="stat-num">98%</span>
+      <span class="stat-lbl">HAPPY USERS</span>
+    </div>
+  </section>
+
+  <!-- ================================
+       HOW IT WORKS
+  ================================ -->
+  <section class="how-section">
+    <h2 class="how-title">How It Works</h2>
+
+    <div class="how-steps">
+
+      <div class="step">
+        <div class="step-icon-box">
+          <span class="material-symbols-outlined step-icon">search</span>
         </div>
+        <h3 class="step-name">Search</h3>
+        <p class="step-desc">Enter your destination and find available parking nearby in real-time.</p>
+      </div>
 
-        <!-- Divider -->
-        <div class="stat-divider"></div>
-
-        <!-- Stat 3 -->
-        <div class="stat-item">
-            <span class="stat-number">98%</span>
-            <span class="stat-label">Happy Users</span>
+      <div class="step">
+        <div class="step-icon-box">
+          <span class="material-symbols-outlined step-icon">local_parking</span>
         </div>
+        <h3 class="step-name">Choose Slot</h3>
+        <p class="step-desc">Compare prices and amenities. Select the perfect spot for your vehicle.</p>
+      </div>
 
-    </section>
-
-    <!-- HOW IT WORKS -->
-    <section class="how-it-works">
-
-        <!-- Section heading -->
-        <h2 class="section-title">How It Works</h2>
-
-        <!-- 3 steps in a row -->
-        <div class="steps-row">
-
-            <!-- Step 1 -->
-            <div class="step-card">
-                <div class="step-icon-box">
-                    <span class="material-symbols-outlined step-icon">search</span>
-                </div>
-                <h3 class="step-title">Search</h3>
-                <p class="step-desc">
-                    Enter your destination and find available
-                    parking nearby in real-time.
-                </p>
-            </div>
-
-            <!-- Arrow between steps -->
-            <div class="step-arrow">&#8594;</div>
-
-            <!-- Step 2 -->
-            <div class="step-card">
-                <div class="step-icon-box">
-                    <span class="material-symbols-outlined step-icon">local_parking</span>
-                </div>
-                <h3 class="step-title">Choose Slot</h3>
-                <p class="step-desc">
-                    Compare prices and amenities. Select
-                    the perfect spot for your vehicle.
-                </p>
-            </div>
-
-            <!-- Arrow between steps -->
-            <div class="step-arrow">&#8594;</div>
-
-            <!-- Step 3 -->
-            <div class="step-card">
-                <div class="step-icon-box">
-                    <span class="material-symbols-outlined step-icon">qr_code_2</span>
-                </div>
-                <h3 class="step-title">Pay & Get QR</h3>
-                <p class="step-desc">
-                    Secure UPI checkout and instant QR code
-                    for easy entry. No tickets needed.
-                </p>
-            </div>
-
+      <div class="step">
+        <div class="step-icon-box">
+          <span class="material-symbols-outlined step-icon">qr_code_2</span>
         </div>
+        <h3 class="step-name">Pay &amp; Get QR</h3>
+        <p class="step-desc">Secure UPI checkout and instant QR code for easy entry. No tickets needed.</p>
+      </div>
 
-    </section>
+    </div>
+  </section>
 
-    <!-- FEATURED FACILITIES -->
-    <section class="facilities">
+  <!-- ================================
+       FEATURED FACILITIES
+  ================================ -->
+  <section class="facilities-section">
 
-        <!-- Top row - heading + scroll buttons -->
-        <div class="facilities-header">
+    <div class="facilities-header">
+      <div>
+        <span class="top-rated-tag">TOP RATED</span>
+        <h2 class="facilities-title">Featured Facilities</h2>
+      </div>
+      <div class="scroll-btns">
+        <button class="scroll-btn" onclick="document.getElementById('cards').scrollBy({left:-360,behavior:'smooth'})">&#8249;</button>
+        <button class="scroll-btn" onclick="document.getElementById('cards').scrollBy({left:360,behavior:'smooth'})">&#8250;</button>
+      </div>
+    </div>
 
-            <div>
-                <span class="facilities-tag">Top Rated</span>
-                <h2 class="section-title">Featured Facilities</h2>
-            </div>
+    <div class="cards-row" id="cards">
 
-            <!-- Left / Right scroll buttons -->
-            <div class="scroll-buttons">
-                <button class="scroll-btn"
-                    onclick="document.getElementById('cards-row').scrollBy({left: -350, behavior: 'smooth'})">
-                    &#8592;
-                </button>
-                <button class="scroll-btn"
-                    onclick="document.getElementById('cards-row').scrollBy({left: 350, behavior: 'smooth'})">
-                    &#8594;
-                </button>
-            </div>
-
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjMhOv8u7OJywyvZO7j1g4JX-bB4Vl5tUZVVzvmEUDCioT-FrziTUxYeOCihg88hrMqnY8_r2u-vztXYz8uyyGKPW7S9-z_5Hlu96ZXUC8yTOO40UUjXSfpyXgV-lMH-Er5uHNljSk1ol1XYioXzzs4YWt5cKwRNHdS4wk2i8ZQASx7XAo3r7_RJo62T_urSy_VKGZsh723S9VJZAhFxIm9feMmEf2Q8qHRBBxZP2UABu6JMqLzfspM8FJIdVxR3eUdHk7_Ob4jU_x" alt="Connaught Place" />
+          <span class="price-tag">&#8377;40/hr</span>
         </div>
-
-        <!-- Scrollable cards row -->
-        <div class="cards-row" id="cards-row">
-
-            <!-- Card 1 - New Delhi -->
-            <div class="facility-card">
-                <div class="card-image-box">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjMhOv8u7OJywyvZO7j1g4JX-bB4Vl5tUZVVzvmEUDCioT-FrziTUxYeOCihg88hrMqnY8_r2u-vztXYz8uyyGKPW7S9-z_5Hlu96ZXUC8yTOO40UUjXSfpyXgV-lMH-Er5uHNljSk1ol1XYioXzzs4YWt5cKwRNHdS4wk2i8ZQASx7XAo3r7_RJo62T_urSy_VKGZsh723S9VJZAhFxIm9feMmEf2Q8qHRBBxZP2UABu6JMqLzfspM8FJIdVxR3eUdHk7_Ob4jU_x"
-                        alt="Connaught Place Parking" />
-                    <!-- Price badge on image -->
-                    <span class="price-badge">&#8377;40/hr</span>
-                </div>
-
-                <div class="card-body">
-                    <div class="card-top-row">
-                        <h4 class="card-name">Connaught Place Central</h4>
-                        <!-- Star rating -->
-                        <div class="card-rating">
-                            <span class="star">&#9733;</span>
-                            <span class="rating-number">4.8</span>
-                        </div>
-                    </div>
-
-                    <p class="card-location">
-                        <span class="material-symbols-outlined location-icon">location_on</span>
-                        Connaught Place, New Delhi
-                    </p>
-
-                    <div class="card-tags">
-                        <span class="tag">EV Charging</span>
-                        <span class="tag">24/7 Security</span>
-                    </div>
-                </div>
+        <div class="card-info">
+          <div class="card-row">
+            <h4 class="card-title">Connaught Place Central</h4>
+            <div class="rating">
+              <span class="star-icon">&#9733;</span>
+              <span class="rating-val">4.8</span>
             </div>
-
-            <!-- Card 2 - Mumbai -->
-            <div class="facility-card">
-                <div class="card-image-box">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-PNX6GbR8xeQkRzyd8too3609lCelgm76LMYi0lGi0JNTPIqFKzCK-vmPUouhTTkhS6jYd18KwOU-oggyFheBK_7CEgN8xxTQRqPgVQiMtKcbOb_Wc6fueR0wqMpcGluG3LMwCAgBdBDzMfGzuYq6kPDk5iHPLOY_14kOpdw9VFqKIguZ4gX9acdcjJM5M3C79tCZ5O08VRQgTHJKFjZnvOXpOVXcQPzReKkvlAI0vS25-FL1kouqwOCzt3bAZM3xWitH56I4S4E5"
-                        alt="Marine Drive Parking" />
-                    <span class="price-badge">&#8377;30/hr</span>
-                </div>
-
-                <div class="card-body">
-                    <div class="card-top-row">
-                        <h4 class="card-name">Marine Drive Tower</h4>
-                        <div class="card-rating">
-                            <span class="star">&#9733;</span>
-                            <span class="rating-number">4.6</span>
-                        </div>
-                    </div>
-
-                    <p class="card-location">
-                        <span class="material-symbols-outlined location-icon">location_on</span>
-                        Marine Drive, Mumbai
-                    </p>
-
-                    <div class="card-tags">
-                        <span class="tag">Valet</span>
-                        <span class="tag">Covered</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 - Bengaluru -->
-            <div class="facility-card">
-                <div class="card-image-box">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwWg6_F-rgioTAXgshkdvww7KIfVHyq9zeNXWe5B5IjLs8nM9981kxoaLcF1cjfMDu0qq05hxEHcKoJwLfB_eNYkmYE2JNxakpi09dKjq3sK8JLW0KgUBrBKabQY6L945aZI0yQhWvB-ivVxj53e1ZJlVJUFvsVYzYRjEVt_v_lgPvaL9fe2M2emOnSxviEoah-U2MtboOKxNFbAnq6T09B1eR0a4__kKnXg-noDAsM2iBDZSaeN6I-4VdhBa5jLWvixiAFpgHKxR_"
-                        alt="MG Road Parking" />
-                    <span class="price-badge">&#8377;45/hr</span>
-                </div>
-
-                <div class="card-body">
-                    <div class="card-top-row">
-                        <h4 class="card-name">MG Road Smart Park</h4>
-                        <div class="card-rating">
-                            <span class="star">&#9733;</span>
-                            <span class="rating-number">4.9</span>
-                        </div>
-                    </div>
-
-                    <p class="card-location">
-                        <span class="material-symbols-outlined location-icon">location_on</span>
-                        MG Road, Bengaluru
-                    </p>
-
-                    <div class="card-tags">
-                        <span class="tag">CCTV</span>
-                        <span class="tag">App Only</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 - Chennai -->
-            <div class="facility-card">
-                <div class="card-image-box">
-                    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD43GnFZRWPG0PVTQDH6c6J4U1ZkI-ZPCIBkTGbrvnLF30RinMK7B0AfUL_griS7bBw_dyBr1kQCNUGgO0g-EJY4wk7Z4xH-x_Ou2Dc5Qxkwn9B_r9RkYdjroVWs80rvXVHbDZ3lCabiw2ZbquLUmkJiHKnEJR4a7651eg-Ivfji9V4fE6eSASWul-_xarMvwCBJS36TE4PD8C9DOnRMnGGKpAkjpsFqLckvnxX2EaJhVsToYnAanIUROJ0o-zz-iAiXjaSwPla5S2F"
-                        alt="Anna Salai Parking" />
-                    <span class="price-badge">&#8377;25/hr</span>
-                </div>
-
-                <div class="card-body">
-                    <div class="card-top-row">
-                        <h4 class="card-name">Anna Salai Metro Hub</h4>
-                        <div class="card-rating">
-                            <span class="star">&#9733;</span>
-                            <span class="rating-number">4.4</span>
-                        </div>
-                    </div>
-
-                    <p class="card-location">
-                        <span class="material-symbols-outlined location-icon">location_on</span>
-                        Anna Salai, Chennai
-                    </p>
-
-                    <div class="card-tags">
-                        <span class="tag">Budget</span>
-                        <span class="tag">Shuttle</span>
-                    </div>
-                </div>
-            </div>
-
+          </div>
+          <p class="card-loc">
+            <span class="material-symbols-outlined loc-icon">location_on</span>
+            Connaught Place, New Delhi
+          </p>
+          <div class="card-tags">
+            <span class="badge">EV CHARGING</span>
+            <span class="badge">24/7 SECURITY</span>
+          </div>
         </div>
+      </div>
 
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-
-        <!-- Top part - 3 columns -->
-        <div class="footer-top">
-
-            <!-- Column 1 - Brand -->
-            <div class="footer-brand">
-                <h3 class="footer-logo">Parkflow</h3>
-                <p class="footer-desc">
-                    India's leading platform for precision
-                    parking booking. Reliable, secure,
-                    and always accessible.
-                </p>
-            </div>
-
-            <!-- Column 2 - Links -->
-            <div class="footer-links-group">
-
-                <div class="footer-col">
-                    <h5 class="footer-col-title">Platform</h5>
-                    <a href="#" class="footer-link">About</a>
-                    <a href="#" class="footer-link">Privacy</a>
-                </div>
-
-                <div class="footer-col">
-                    <h5 class="footer-col-title">Support</h5>
-                    <a href="#" class="footer-link">Terms</a>
-                    <a href="#" class="footer-link">Contact</a>
-                </div>
-
-            </div>
-
-            <!-- Column 3 - Newsletter -->
-            <div class="footer-newsletter">
-                <h5 class="footer-col-title">Newsletter</h5>
-                <p class="footer-newsletter-desc">
-                    Get parking tips and exclusive offers.
-                </p>
-                <div class="newsletter-row">
-                    <input type="email" placeholder="Email address" class="newsletter-input" />
-                    <button class="newsletter-btn">Join</button>
-                </div>
-            </div>
-
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-PNX6GbR8xeQkRzyd8too3609lCelgm76LMYi0lGi0JNTPIqFKzCK-vmPUouhTTkhS6jYd18KwOU-oggyFheBK_7CEgN8xxTQRqPgVQiMtKcbOb_Wc6fueR0wqMpcGluG3LMwCAgBdBDzMfGzuYq6kPDk5iHPLOY_14kOpdw9VFqKIguZ4gX9acdcjJM5M3C79tCZ5O08VRQgTHJKFjZnvOXpOVXcQPzReKkvlAI0vS25-FL1kouqwOCzt3bAZM3xWitH56I4S4E5" alt="Marine Drive" />
+          <span class="price-tag">&#8377;30/hr</span>
         </div>
-
-        <!-- Bottom bar - copyright + social icons -->
-        <div class="footer-bottom">
-            <p class="footer-copy">
-                &copy; 2026 Parkflow Precision Booking. All rights reserved.
-            </p>
-            <div class="footer-socials">
-                <span class="material-symbols-outlined social-icon">face_nod</span>
-                <span class="material-symbols-outlined social-icon">share</span>
-                <span class="material-symbols-outlined social-icon">alternate_email</span>
+        <div class="card-info">
+          <div class="card-row">
+            <h4 class="card-title">Marine Drive Tower</h4>
+            <div class="rating">
+              <span class="star-icon">&#9733;</span>
+              <span class="rating-val">4.6</span>
             </div>
+          </div>
+          <p class="card-loc">
+            <span class="material-symbols-outlined loc-icon">location_on</span>
+            Marine Drive, Mumbai
+          </p>
+          <div class="card-tags">
+            <span class="badge">VALET</span>
+            <span class="badge">COVERED</span>
+          </div>
         </div>
+      </div>
 
-    </footer>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCwWg6_F-rgioTAXgshkdvww7KIfVHyq9zeNXWe5B5IjLs8nM9981kxoaLcF1cjfMDu0qq05hxEHcKoJwLfB_eNYkmYE2JNxakpi09dKjq3sK8JLW0KgUBrBKabQY6L945aZI0yQhWvB-ivVxj53e1ZJlVJUFvsVYzYRjEVt_v_lgPvaL9fe2M2emOnSxviEoah-U2MtboOKxNFbAnq6T09B1eR0a4__kKnXg-noDAsM2iBDZSaeN6I-4VdhBa5jLWvixiAFpgHKxR_" alt="MG Road" />
+          <span class="price-tag">&#8377;45/hr</span>
+        </div>
+        <div class="card-info">
+          <div class="card-row">
+            <h4 class="card-title">MG Road Smart Park</h4>
+            <div class="rating">
+              <span class="star-icon">&#9733;</span>
+              <span class="rating-val">4.9</span>
+            </div>
+          </div>
+          <p class="card-loc">
+            <span class="material-symbols-outlined loc-icon">location_on</span>
+            MG Road, Bengaluru
+          </p>
+          <div class="card-tags">
+            <span class="badge">CCTV</span>
+            <span class="badge">APP ONLY</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="card-img-wrap">
+          <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD43GnFZRWPG0PVTQDH6c6J4U1ZkI-ZPCIBkTGbrvnLF30RinMK7B0AfUL_griS7bBw_dyBr1kQCNUGgO0g-EJY4wk7Z4xH-x_Ou2Dc5Qxkwn9B_r9RkYdjroVWs80rvXVHbDZ3lCabiw2ZbquLUmkJiHKnEJR4a7651eg-Ivfji9V4fE6eSASWul-_xarMvwCBJS36TE4PD8C9DOnRMnGGKpAkjpsFqLckvnxX2EaJhVsToYnAanIUROJ0o-zz-iAiXjaSwPla5S2F" alt="Anna Salai" />
+          <span class="price-tag">&#8377;25/hr</span>
+        </div>
+        <div class="card-info">
+          <div class="card-row">
+            <h4 class="card-title">Anna Salai Metro Hub</h4>
+            <div class="rating">
+              <span class="star-icon">&#9733;</span>
+              <span class="rating-val">4.4</span>
+            </div>
+          </div>
+          <p class="card-loc">
+            <span class="material-symbols-outlined loc-icon">location_on</span>
+            Anna Salai, Chennai
+          </p>
+          <div class="card-tags">
+            <span class="badge">BUDGET</span>
+            <span class="badge">SHUTTLE</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ================================
+       FOOTER
+  ================================ -->
+  <footer class="footer">
+
+    <div class="footer-top">
+
+      <!-- Brand -->
+      <div class="footer-brand">
+        <h3 class="footer-logo">Parkflow</h3>
+        <p class="footer-tagline">
+          India's leading platform for precision parking booking.
+          Reliable, secure, and always accessible.
+        </p>
+      </div>
+
+      <!-- Platform links -->
+      <div class="footer-col">
+        <h5 class="footer-col-heading">PLATFORM</h5>
+        <a href="#" class="footer-link">About</a>
+        <a href="#" class="footer-link">Privacy</a>
+      </div>
+
+      <!-- Support links -->
+      <div class="footer-col">
+        <h5 class="footer-col-heading">SUPPORT</h5>
+        <a href="#" class="footer-link">Terms</a>
+        <a href="#" class="footer-link">Contact</a>
+      </div>
+
+      <!-- Newsletter -->
+      <div class="footer-col footer-newsletter">
+        <h5 class="footer-col-heading">NEWSLETTER</h5>
+        <p class="footer-newsletter-text">Get parking tips and exclusive offers.</p>
+        <div class="newsletter-row">
+          <input type="email" placeholder="Email address" class="newsletter-input" />
+          <button class="newsletter-btn">Join</button>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="footer-bottom">
+      <p class="footer-copy">&copy; 2024 Parkflow Precision Booking. All rights reserved.</p>
+      <div class="footer-icons">
+        <span class="material-symbols-outlined footer-icon">face_nod</span>
+        <span class="material-symbols-outlined footer-icon">share</span>
+        <span class="material-symbols-outlined footer-icon">alternate_email</span>
+      </div>
+    </div>
+
+  </footer>
 
 </body>
-
 </html>
