@@ -1,0 +1,587 @@
+/* =========================================
+   css/style.css
+   Global Styles, Variables, and Layouts
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Geist:wght@500;600;700&display=swap');
+
+:root {
+    /* Brand Colors (Matched exactly to code.html) */
+    --primary: #2563eb;
+    /* Blue used in buttons & CTA */
+    --primary-hover: #1d4ed8;
+    --secondary: #10b981;
+    /* Green used in icons & secondary btn */
+    --secondary-hover: rgba(16, 185, 129, 0.05);
+
+    /* Surface & Background Colors */
+    --background: #faf8ff;
+    --on-background: #191b23;
+    --surface-lowest: #ffffff;
+    --surface-low: #f3f3fe;
+    --on-surface-variant: #434655;
+    --outline-variant: rgba(195, 198, 215, 0.3);
+
+    /* Typography */
+    --font-geist: 'Geist', sans-serif;
+    --font-inter: 'Inter', sans-serif;
+
+    /* Layout Variables */
+    --container-max: 1280px;
+    --gutter: 24px;
+}
+
+/* ================== BASE RESET ================== */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-inter);
+    background-color: var(--background);
+    color: var(--on-background);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ================== TYPOGRAPHY ================== */
+.headline-xl {
+    font-family: var(--font-geist);
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    letter-spacing: -0.02em;
+}
+
+.headline-lg {
+    font-family: var(--font-geist);
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: -0.01em;
+}
+
+.headline-md {
+    font-family: var(--font-geist);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 32px;
+}
+
+.body-lg {
+    font-family: var(--font-inter);
+    font-size: 18px;
+    line-height: 28px;
+}
+
+.body-md {
+    font-family: var(--font-inter);
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.body-sm {
+    font-family: var(--font-inter);
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.label-md {
+    font-family: var(--font-geist);
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+/* Text Colors */
+.text-primary {
+    color: var(--primary);
+}
+
+.text-secondary {
+    color: var(--secondary);
+}
+
+.text-variant {
+    color: var(--on-surface-variant);
+}
+
+.text-white {
+    color: #ffffff;
+}
+
+/* ================== LAYOUT & GRID ================== */
+.container {
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 40px;
+    }
+}
+
+.section {
+    padding: 96px 0;
+}
+
+.pt-128 {
+    padding-top: 128px;
+}
+
+.pb-96 {
+    padding-bottom: 96px;
+}
+
+/* CSS Grid */
+.grid {
+    display: grid;
+    gap: var(--gutter);
+}
+
+.grid-cols-1 {
+    grid-template-columns: 1fr;
+}
+
+.grid-cols-2 {
+    grid-template-columns: 1fr;
+}
+
+.grid-cols-3 {
+    grid-template-columns: 1fr;
+}
+
+.grid-cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* 2 cols on mobile for stats */
+
+@media (min-width: 1024px) {
+    .grid-cols-2 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-cols-3 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .grid-cols-4 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Flexbox Utilities */
+.flex {
+    display: flex;
+}
+
+.flex-col {
+    flex-direction: column;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.items-start {
+    align-items: flex-start;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-center {
+    justify-content: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.gap-4 {
+    gap: 16px;
+}
+
+.gap-6 {
+    gap: 24px;
+}
+
+.gap-8 {
+    gap: 32px;
+}
+
+@media (min-width: 1024px) {
+    .lg-text-left {
+        text-align: left;
+    }
+
+    .lg-justify-start {
+        justify-content: flex-start;
+    }
+
+    .lg-flex-row {
+        flex-direction: row;
+    }
+
+    .lg-order-1 {
+        order: 1;
+    }
+
+    .lg-order-2 {
+        order: 2;
+    }
+}
+
+/* ================== ANIMATIONS ================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add this to the bottom of css/components.css */
+
+/* =========================================
+   ALERTS & FEEDBACK
+   ========================================= */
+.alert {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    border-radius: 12px;
+    font-family: var(--font-inter);
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 24px;
+    transition: all 0.3s ease;
+}
+
+.alert-success {
+    background-color: rgba(16, 185, 129, 0.1);
+    /* Secondary Green with 10% opacity */
+    border: 1px solid rgba(16, 185, 129, 0.2);
+    color: var(--secondary);
+}
+
+.hidden {
+    display: none !important;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   Layout Extensions (Details Page)
+   ========================================= */
+.pd-main {
+    padding-top: 40px;
+    padding-bottom: 80px;
+}
+
+.mt-xs {
+    margin-top: 4px;
+}
+
+.mt-sm {
+    margin-top: 8px;
+}
+
+.mt-md {
+    margin-top: 16px;
+}
+
+.mt-lg {
+    margin-top: 24px;
+}
+
+.mt-xl {
+    margin-top: 40px;
+}
+
+.space-y-sm>*+* {
+    margin-top: 12px;
+}
+
+.space-y-xl>*+* {
+    margin-top: 40px;
+}
+
+.pb-md {
+    padding-bottom: 16px;
+}
+
+.mb-xs {
+    margin-bottom: 4px;
+}
+
+.mb-sm {
+    margin-bottom: 8px;
+}
+
+.mb-md {
+    margin-bottom: 16px;
+}
+
+.mb-lg {
+    margin-bottom: 24px;
+}
+
+.text-warning {
+    color: #f59e0b;
+}
+
+.font-bold {
+    font-weight: 700;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.opacity-90 {
+    opacity: 0.9;
+}
+
+.tracking-wider {
+    letter-spacing: 0.05em;
+}
+
+.label-xs {
+    font-family: var(--font-geist);
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--outline-variant);
+}
+
+/* Details Layout Grid (Left content, Right Sidebar) */
+.details-layout {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--gutter);
+    align-items: start;
+}
+
+@media (min-width: 1024px) {
+    .details-layout {
+        grid-template-columns: 2fr 1fr;
+        /* 66% / 33% split */
+    }
+}
+
+/* 4-Column Responsive Grid */
+.grid-4-cols {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+@media (min-width: 768px) {
+    .grid-4-cols {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* ==========================================================================
+   GLOBAL UTILITIES & FIXES (Append to bottom of css/style.css)
+   ========================================================================== */
+
+/* Fix BUG-07: Material Symbols Filled standardization */
+.icon-filled {
+    font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24 !important;
+}
+
+/* Hide scrollbars across browsers while keeping scroll functionality */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Helper utilities used in redesigned cards */
+.w-full {
+    width: 100%;
+}
+
+.text-xs {
+    font-size: 12px;
+}
+
+.text-on-surface {
+    color: var(--on-background);
+}
+
+.text-variant {
+    color: var(--on-surface-variant);
+}
+
+/* ==========================================================================
+   GLOBAL NAVBAR & FOOTER STYLES (Append to css/style.css)
+   ========================================================================== */
+
+/* Navbar Search Pill */
+.nav-search-box {
+    display: flex;
+    align-items: center;
+    background: #f6f3f2;
+    padding: 6px 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(195, 198, 215, 0.4);
+    width: 280px;
+    transition: all 0.2s ease;
+}
+.nav-search-box:focus-within {
+    border-color: var(--primary);
+    background: #ffffff;
+}
+.search-icon-sm {
+    font-size: 18px;
+    color: #737686;
+    margin-right: 6px;
+}
+.nav-search-input-sm {
+    background: transparent;
+    border: none;
+    outline: none;
+    width: 100%;
+    font-size: 13px;
+    color: #1c1b1b;
+}
+
+/* Notification Badge Dot */
+.notification-badge-dot {
+    position: absolute;
+    top: 6px;
+    right: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #ba1a1a;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+}
+
+/* User Avatar Chip */
+.user-chip-sm {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 9999px;
+    transition: background 0.2s ease;
+}
+.user-chip-sm:hover {
+    background: #f6f3f2;
+}
+.avatar-circle-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #2563eb;
+    border: 1px solid var(--outline-variant);
+}
+.avatar-circle-sm img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.user-name-label {
+    font-family: var(--font-geist);
+    font-size: 14px;
+    font-weight: 600;
+    color: #1c1b1b;
+}
+
+/* Standardized Modern Footer */
+.app-footer-modern {
+    background: #ffffff;
+    border-top: 1px solid var(--outline-variant);
+    padding: 48px 0;
+    margin-top: 64px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+@media (min-width: 768px) {
+    .footer-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+.footer-col {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.footer-heading {
+    font-family: var(--font-geist);
+    font-size: 14px;
+    font-weight: 700;
+    color: #1c1b1b;
+    margin-bottom: 8px;
+}
+.footer-link {
+    font-size: 13px;
+    color: #434655;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+.footer-link:hover {
+    color: var(--primary);
+    text-decoration: underline;
+}
